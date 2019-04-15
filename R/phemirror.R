@@ -155,8 +155,8 @@ phemirror <- function(top, bottom, phegroup, tline, bline, log10=TRUE, yaxis, op
     p1 <- p1 + geom_rect(data = lims, aes(xmin = posmin-.5, xmax = posmax+.5, ymin = -Inf, ymax = min(d_order$pval), fill=as.factor(Color)), alpha = 1)
   }
   #Add legend
-  p1 <- p1 + scale_colour_manual(name = "Color", values = topcols) + scale_fill_manual(name = "Color", values = topcols, guides(alpha=FALSE))
-  p1 <- p1 + theme(panel.grid.minor.x = element_blank(), panel.grid.major.x=element_blank(), axis.title.x=element_blank(), legend.position="top", legend.title=element_blank())
+  #p1 <- p1 + scale_colour_manual(name = "Color", values = topcols) + scale_fill_manual(name = "Color", values = topcols, guides(alpha=FALSE))
+  #p1 <- p1 + theme(panel.grid.minor.x = element_blank(), panel.grid.major.x=element_blank(), axis.title.x=element_blank(), legend.position="top", legend.title=element_blank())
   
   #Start plotting
   #BOTTOM PLOT
@@ -172,8 +172,8 @@ phemirror <- function(top, bottom, phegroup, tline, bline, log10=TRUE, yaxis, op
     p2 <- p2 + geom_rect(data = lims, aes(xmin = posmin-.5, xmax = posmax+.5, ymin = -Inf, ymax = min(d_order$pval), fill=as.factor(Color)), alpha = 1)
   } 
   #Add legend
-  p2 <- p2 + scale_colour_manual(name = "Color", values = bottomcols) + scale_fill_manual(name = "Color", values = bottomcols, guides(alpha=FALSE))
-  p2 <- p2 + theme(axis.text.x=element_text(angle=90), panel.grid.minor.x = element_blank(), panel.grid.major.x=element_blank(), axis.title.x=element_blank(), legend.position="bottom", legend.title=element_blank())
+  #p2 <- p2 + scale_colour_manual(name = "Color", values = bottomcols) + scale_fill_manual(name = "Color", values = bottomcols, guides(alpha=FALSE))
+  #p2 <- p2 + theme(axis.text.x=element_text(angle=90), panel.grid.minor.x = element_blank(), panel.grid.major.x=element_blank(), axis.title.x=element_blank(), legend.position="bottom", legend.title=element_blank())
  
  #Highlight if given
   if(!missing(highlight_snp)){
